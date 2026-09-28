@@ -6,17 +6,17 @@
 
 ## Структура проекта
 
-index.html главная
-blog.html статья блога
-src/scss/ исходники стилей
-abstracts/ токены, контрольные ширины
-base/ reset, типографика
-blocks/ по файлу на каждый БЭМ-блок
-main.scss точка входа
-css/style.css скомпилированный css
-img/ фото и иконки
-docs/
-decomposition.md декомпозиция
+-index.html главная
+-blog.html статья блога
+-src/scss/ исходники стилей
+-abstracts/ токены, контрольные ширины
+-base/ reset, типографика
+-blocks/ по файлу на каждый БЭМ-блок
+-main.scss точка входа
+-css/style.css скомпилированный css
+-img/ фото и иконки
+-docs/
+-decomposition.md декомпозиция
 
 
 ## Запуск
