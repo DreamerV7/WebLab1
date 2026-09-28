@@ -1,0 +1,147 @@
+@use "../abstracts/breakpoints" as *;
+
+.join {
+  padding-block: var(--space-section);
+  background: var(--color-surface-alt) url("../img/photos/join-bg.jpg") center / cover no-repeat;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-8);
+  }
+}
+
+.join-form {
+  width: 100%;
+  max-width: 38.5rem;
+  padding: var(--space-6) var(--space-4);
+  background: var(--color-surface);
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-card);
+
+  &__title {
+    font-size: var(--text-card-title);
+    line-height: 1.5;
+  }
+
+  &__text {
+    margin-top: var(--space-2);
+    font-size: var(--text-body-lg);
+    line-height: 1.85;
+    color: var(--color-text-muted);
+  }
+
+  &__fields {
+    display: grid;
+    gap: var(--space-3);
+    margin-top: var(--space-5);
+  }
+
+  &__submit {
+    width: 100%;
+    margin-top: var(--space-6);
+  }
+
+  @include mq($bp-md) {
+    padding: var(--space-8) var(--space-8) var(--space-10);
+
+    &__submit {
+      width: auto;
+      min-width: 13.875rem;
+    }
+  }
+}
+
+
+.field {
+  position: relative;
+
+  &__control {
+    display: block;
+    width: 100%;
+    height: var(--field-height);
+    padding: var(--space-4) var(--space-3);
+    font-size: var(--text-body);
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: var(--color-text);
+    background: var(--color-surface);
+    border: var(--border-field);
+    border-radius: var(--radius-s);
+    transition: border-color var(--transition), box-shadow var(--transition);
+    appearance: none;
+
+    @include hover {
+      border-color: var(--color-text);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-accent-strong);
+      box-shadow: inset 0 0 0 1px var(--color-accent-strong);
+    }
+
+    &:user-invalid {
+      border-color: #c62828;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: calc(var(--field-height) / 2);
+    left: var(--space-3);
+    max-width: calc(100% - 3.5rem);
+    padding-inline: var(--space-1);
+    overflow: hidden;
+    font-size: var(--text-body);
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--color-field-text);
+    background: var(--color-surface);
+    pointer-events: none;
+    transform: translateY(-50%);
+    transform-origin: left center;
+    transition: transform var(--transition), top var(--transition), color var(--transition);
+  }
+
+  &__control:focus + &__label,
+  input.field__control:not(:placeholder-shown) + &__label,
+  textarea.field__control:not(:placeholder-shown) + &__label,
+  select.field__control:has(option:checked:not([value=""])) + &__label {
+    top: 0;
+    max-width: calc((100% - 2rem) / 0.75);
+    transform: translateY(-50%) scale(0.75);
+  }
+
+  &__control:focus + &__label {
+    color: var(--color-accent-strong);
+  }
+
+  &--select &__control {
+    padding-right: 2.75rem;
+    background: var(--color-surface) url("../img/icons/select-arrow.svg") right 0.625rem center / 1.5rem no-repeat;
+    cursor: pointer;
+  }
+
+  &--select input.field__control {
+    cursor: text;
+  }
+
+  &--select input.field__control::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+
+  &--textarea &__control {
+    height: auto;
+    min-height: 6.375rem;
+    resize: vertical;
+  }
+
+  &--textarea &__label {
+    top: 1.75rem;
+    white-space: normal;
+  }
+}

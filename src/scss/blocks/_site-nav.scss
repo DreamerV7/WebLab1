@@ -1,0 +1,60 @@
+@use "../abstracts/breakpoints" as *;
+
+.site-nav {
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    min-height: var(--tap);
+    padding-inline: var(--space-2);
+    text-decoration: none;
+    color: var(--color-nav);
+    border-radius: var(--radius-s);
+    transition: color var(--transition);
+
+    @include hover {
+      color: var(--color-accent-strong);
+    }
+
+    &[aria-current="page"] {
+      color: var(--color-accent-strong);
+    }
+  }
+
+  @include mq($bp-md) {
+    &__list {
+      flex-direction: row;
+      gap: clamp(var(--space-2), 3vw, var(--space-12));
+    }
+  }
+
+  &--footer &__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 var(--space-4);
+  }
+
+  &--footer &__link {
+    padding-inline: 0;
+    font-size: var(--text-small);
+    color: var(--color-footer);
+
+    &[aria-current="page"] {
+      color: var(--color-footer);
+    }
+
+    @include hover {
+      color: var(--color-accent-strong);
+    }
+  }
+
+  @include mq($bp-md) {
+    &--footer &__list {
+      gap: var(--space-8);
+    }
+  }
+}

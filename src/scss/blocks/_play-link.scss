@@ -1,0 +1,66 @@
+@use "../abstracts/breakpoints" as *;
+
+.play-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--tap);
+  font-size: var(--text-body);
+  line-height: 1.2;
+  text-decoration: none;
+  color: var(--color-text);
+
+  &__icon {
+    flex-shrink: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background-color: var(--color-accent-soft);
+    transition: transform var(--transition), box-shadow var(--transition);
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-accent);
+      mask: url("../img/icons/play.svg") 55% 50% / 36% no-repeat;
+    }
+  }
+
+  @include hover {
+    .play-link__text {
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+
+    .play-link__icon {
+      transform: scale(1.08);
+    }
+  }
+
+  &--solid {
+    color: var(--color-accent-strong);
+
+    .play-link__icon {
+      background-color: var(--color-accent);
+
+      &::before {
+        background-color: var(--color-on-accent);
+      }
+    }
+  }
+
+  &--large {
+    .play-link__icon {
+      width: 3rem;
+      height: 3rem;
+      background-color: var(--color-accent);
+      box-shadow: var(--shadow-pop);
+
+      &::before {
+        background-color: var(--color-on-accent);
+      }
+    }
+  }
+}

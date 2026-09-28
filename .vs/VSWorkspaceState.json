@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\css",
+    "\\img",
+    "\\src",
+    "\\src\\scss",
+    "\\src\\scss\\abstracts",
+    "\\src\\scss\\base",
+    "\\src\\scss\\blocks"
+  ],
+  "SelectedNode": "\\package-lock.json",
+  "PreviewInSolutionExplorer": false
+}

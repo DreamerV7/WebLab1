@@ -1,0 +1,17 @@
+$bp-md: 48em;
+$bp-lg: 64em;
+$bp-xl: 80em;
+
+@mixin mq($min) {
+  @media (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@use "../abstracts/breakpoints" as *;
+
+.note {
+  padding: var(--space-4);
+  background: var(--color-note);
+  border-radius: var(--radius-s);
+
+  &__title {
+    display: block;
+    color: var(--color-heading);
+  }
+
+  @include mq($bp-md) {
+    padding: var(--space-5) var(--space-8);
+  }
+}

@@ -1,0 +1,73 @@
+@use "../abstracts/breakpoints" as *;
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+  gap: var(--space-6) var(--space-4);
+  margin-top: var(--space-8);
+
+  @include mq($bp-md) {
+    gap: var(--space-8) var(--space-6);
+  }
+
+  @include mq($bp-xl) {
+    gap: var(--space-8) var(--space-10);
+    margin-top: var(--space-12);
+  }
+}
+
+.location-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 269 / 317;
+    object-fit: cover;
+    border-radius: var(--radius-m);
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+
+  &__title {
+    margin-top: var(--space-2);
+    font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+    line-height: 1.5;
+  }
+
+  &__link {
+    font-size: var(--text-body);
+    line-height: 1.2;
+    text-decoration: none;
+    color: var(--color-accent-strong);
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius-m);
+    }
+
+    &:focus-visible {
+      outline: none;
+
+      &::after {
+        outline: 2px solid var(--color-accent-strong);
+        outline-offset: 4px;
+      }
+    }
+  }
+
+  @include hover {
+    .location-card__image {
+      box-shadow: var(--shadow-lift);
+      transform: translateY(-4px);
+    }
+
+    .location-card__link {
+      text-decoration: underline;
+    }
+  }
+}

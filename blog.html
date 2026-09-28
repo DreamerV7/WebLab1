@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello Switzerland! — Talking Travel</title>
+  <meta name="description" content="Our Swiss adventure story: the Matterhorn, Zermatt, the Bernina Express and the best hikes in Switzerland.">
+  <link rel="preload" href="./fonts/changa-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/roboto-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="./index.html" aria-label="Talking Travel — home">
+        <img class="logo__image" src="./img/logo.svg" alt="" width="100" height="64">
+      </a>
+
+      <input class="site-header__toggle" type="checkbox" id="nav-toggle" aria-label="Menu">
+      <label class="site-header__burger" for="nav-toggle" aria-hidden="true"></label>
+
+      <nav class="site-nav" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="./index.html">Home</a></li>
+          <li><a class="site-nav__link" href="./blog.html" aria-current="page">Story</a></li>
+          <li><a class="site-nav__link" href="#highlights">Gallery</a></li>
+          <li><a class="site-nav__link" href="#contacts">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="icon-link" href="#" aria-label="Search">
+          <img src="./img/icons/search.svg" alt="" width="22" height="22">
+        </a>
+        <a class="icon-link" href="#" aria-label="Profile">
+          <img src="./img/icons/profile.svg" alt="" width="24" height="24">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="article">
+      <header class="article__header container container--narrow">
+        <hgroup class="section-heading">
+          <p class="section-heading__eyebrow">Popular destinations</p>
+          <h1 class="article__title">Hello Switzerland!</h1>
+        </hgroup>
+        <div class="author">
+          <img class="author__avatar" src="./img/photos/avatar.jpg" alt="" width="35" height="35">
+          <p class="author__text">
+            <span class="author__name">Darrell Steward</span>
+            <span class="author__role">Author / Photographer</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="article__body container container--narrow">
+        <figure class="video-cover">
+          <img class="video-cover__image"
+               src="./img/photos/article-hero.jpg"
+               srcset="./img/photos/article-hero-768.jpg 768w, ./img/photos/article-hero.jpg 1368w"
+               sizes="(min-width: 60em) 912px, 100vw"
+               alt="A hiker in a red jacket standing on a snowy ridge in front of the Matterhorn" width="912" height="540">
+          <img class="video-cover__caption" src="./img/matterhorn.svg" alt="The Matterhorn" width="425" height="82">
+          <a class="video-cover__play" href="#">
+            <span class="visually-hidden">Watch the Matterhorn video</span>
+          </a>
+        </figure>
+
+        <section class="article__section" aria-labelledby="story-title">
+          <h2 class="article__subtitle" id="story-title">Our Swiss adventure story</h2>
+          <p>Location location location! Zermatt Switzerland offers majestic landscapes that cannot be seen elsewhere. The Matterhorn for example. This peak is a sight to behold and seeing it upclose is more magical that we’ve ever imagined. ‘Want to enjoy a nice and cozy swiss breakfast! Well, Zermatt will never fail you.</p>
+        </section>
+
+        <div class="callout" id="callout">
+          <ul class="callout__gallery">
+            <li class="callout__photo callout__photo--tall">
+              <a href="#photo-winter">
+                <img src="./img/photos/swiss-winter-thumb.jpg" alt="Snowy peaks under a cloudy winter sky — open larger" width="220" height="481" loading="lazy">
+              </a>
+            </li>
+            <li class="callout__photo">
+              <a href="#photo-mountains">
+                <img src="./img/photos/swiss-mountains-thumb.jpg" alt="A pine tree on a misty mountain slope — open larger" width="220" height="261" loading="lazy">
+              </a>
+            </li>
+            <li class="callout__photo">
+              <a href="#photo-sunset">
+                <img src="./img/photos/swiss-sunset-thumb.jpg" alt="Chalet roofs below snowy peaks at sunset — open larger" width="220" height="202" loading="lazy">
+              </a>
+            </li>
+          </ul>
+          <div class="callout__body">
+            <figure class="quote">
+              <blockquote class="quote__text">
+                <p>One of the best hikes we’ve done so far...</p>
+              </blockquote>
+            </figure>
+            <p>As one of the alpine countries, landlocked Switzerland with her mountains has to compete not only with her neighbours but with other destinations. There are, e.g., no coastal resorts.</p>
+            <p>The advantage is that tourism in Switzerland benefits of a large diversity of beautiful landscapes in a relatively small space.</p>
+            <a class="button" href="#photo-winter">View full gallery</a>
+          </div>
+        </div>
+
+        <p>The advantage is that tourism in Switzerland benefits of a large diversity of beautiful landscapes in a relatively small space, offering many possibilities for various activities all the year round, in all seasons, although primarily in summer and winter. The offers of nature as well as culture are manifold, but unfortunately price levels throughout the country are high, and this can discourage many people from visiting. Despite this major drawback, millions of visitors from all over the world arrive(d) every year.</p>
+
+        <section class="highlights" id="highlights" aria-labelledby="highlights-title">
+          <h2 class="article__subtitle" id="highlights-title">Highlights</h2>
+          <ul class="highlights__list">
+            <li>
+              <figure class="highlight">
+                <img class="highlight__image" src="./img/photos/highlight-barns.jpg" alt="A wooden barn on green terraced meadows below a pine forest" width="289" height="347" loading="lazy">
+                <figcaption class="highlight__caption">The barns built in the 13th and 14th century</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="highlight">
+                <img class="highlight__image" src="./img/photos/highlight-bernina.jpg" alt="A red train crossing a stone viaduct in a snowy valley" width="289" height="347" loading="lazy">
+                <figcaption class="highlight__caption">Riding the amazing Bernina Express</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="highlight">
+                <img class="highlight__image" src="./img/photos/highlight-cable-car.jpg" alt="A cable car cabin high above a glacier valley" width="289" height="347" loading="lazy">
+                <figcaption class="highlight__caption">The Matterhorn glacier cable car ride</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </section>
+
+        <aside class="note" aria-label="Disclaimer">
+          <p><strong class="note__title">Disclaimer</strong>
+          The COVID-19 pandemic has dealt a severe blow to the tourism business in Switzerland. Although it is a minor position in the Swiss export balance, it is nevertheless of considerable importance for those regions of the country that attract domestic and foreign visitors. As a consequence of the lockdown measures, combined with close borders and travel bans, tourism collapsed and only briefly and partly recovered in summer. Its future is uncertain and depends on people’s (future guests’) attitudes and decisions as much as on the economy, political measures and, of course, the progress of the pandemic.</p>
+        </aside>
+      </div>
+    </article>
+
+    <section class="join" id="join" aria-labelledby="join-title">
+      <div class="container join__inner">
+        <hgroup class="section-heading section-heading--center">
+          <p class="section-heading__eyebrow">Let’s build a community</p>
+          <h2 class="section-heading__title" id="join-title">Join our next destination</h2>
+        </hgroup>
+        <form class="join-form" action="#" method="post" aria-labelledby="join-form-title">
+          <h3 class="join-form__title" id="join-form-title">Share your travels</h3>
+          <p class="join-form__text">Suggest a new travel destination that you want to see and we will feature it in our blog.</p>
+          <div class="join-form__fields">
+            <div class="field">
+              <input class="field__control" type="text" id="destination" name="destination" placeholder=" " autocomplete="off" required>
+              <label class="field__label" for="destination">Destination name</label>
+            </div>
+            <div class="field field--select">
+              <select class="field__control" id="country" name="country" required>
+                <option value="" selected disabled hidden></option>
+                <option>Iceland</option>
+                <option>Italy</option>
+                <option>Japan</option>
+                <option>Norway</option>
+                <option>Switzerland</option>
+                <option>United Arab Emirates</option>
+                <option>Chile</option>
+                <option>Argentina</option>
+              </select>
+              <label class="field__label" for="country">Country of Destination</label>
+            </div>
+            <div class="field">
+              <input class="field__control" type="text" id="author-name" name="name" placeholder=" " autocomplete="name" required>
+              <label class="field__label" for="author-name">Your name</label>
+            </div>
+            <div class="field field--select">
+              <select class="field__control" id="category" name="category" required>
+                <option value="" selected disabled hidden></option>
+                <option>Landscape</option>
+                <option>City &amp; architecture</option>
+                <option>People &amp; culture</option>
+                <option>Food</option>
+                <option>Wildlife</option>
+              </select>
+              <label class="field__label" for="category">Shooting category</label>
+            </div>
+            <div class="field field--textarea">
+              <textarea class="field__control" id="focus" name="focus" rows="3" placeholder=" "></textarea>
+              <label class="field__label" for="focus">Describe what kind of photos you want to focus on</label>
+            </div>
+          </div>
+          <button class="button join-form__submit" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="container site-footer__inner">
+      <p class="site-footer__copy"><small>© 2022, Talking Travel. All Rights Reserved.</small></p>
+      <nav class="site-nav site-nav--footer" aria-label="Footer">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="./index.html">Home</a></li>
+          <li><a class="site-nav__link" href="./blog.html" aria-current="page">Blog</a></li>
+          <li><a class="site-nav__link" href="#highlights">Gallery</a></li>
+          <li><a class="site-nav__link" href="#contacts">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="photo-winter" role="dialog" aria-label="Swiss winter photo">
+    <a class="lightbox__backdrop" href="#callout" tabindex="-1" aria-hidden="true"></a>
+    <figure class="lightbox__frame">
+      <img class="lightbox__image" src="./img/photos/swiss-winter.jpg" alt="Snowy peaks under a cloudy winter sky" width="1000" height="680" loading="lazy">
+      <a class="lightbox__close" href="#callout"><span class="visually-hidden">Close</span></a>
+    </figure>
+  </div>
+  <div class="lightbox" id="photo-mountains" role="dialog" aria-label="Swiss mountains photo">
+    <a class="lightbox__backdrop" href="#callout" tabindex="-1" aria-hidden="true"></a>
+    <figure class="lightbox__frame lightbox__frame--portrait">
+      <img class="lightbox__image" src="./img/photos/swiss-mountains.jpg" alt="A pine tree on a misty mountain slope" width="620" height="906" loading="lazy">
+      <a class="lightbox__close" href="#callout"><span class="visually-hidden">Close</span></a>
+    </figure>
+  </div>
+  <div class="lightbox" id="photo-sunset" role="dialog" aria-label="Switzerland sunset photo">
+    <a class="lightbox__backdrop" href="#callout" tabindex="-1" aria-hidden="true"></a>
+    <figure class="lightbox__frame">
+      <img class="lightbox__image" src="./img/photos/swiss-sunset.jpg" alt="Chalet roofs below snowy peaks at sunset" width="1000" height="680" loading="lazy">
+      <a class="lightbox__close" href="#callout"><span class="visually-hidden">Close</span></a>
+    </figure>
+  </div>
+</body>
+</html>

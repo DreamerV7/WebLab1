@@ -1,0 +1,37 @@
+@use "../abstracts/breakpoints" as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--control-height);
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-body);
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-on-accent);
+  background: var(--color-accent-strong);
+  border: 0;
+  border-radius: var(--radius-s);
+  transition: background-color var(--transition), box-shadow var(--transition), transform var(--transition);
+
+  @include hover {
+    background: var(--color-accent-hover);
+    box-shadow: var(--shadow-pop);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.5;
+    box-shadow: none;
+    transform: none;
+  }
+}

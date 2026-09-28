@@ -1,0 +1,51 @@
+@use "../abstracts/breakpoints" as *;
+
+.featured {
+  &__inner {
+    display: grid;
+    gap: var(--space-6);
+    align-items: start;
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 540 / 338;
+    object-fit: cover;
+    border-radius: var(--radius-m);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  &__text {
+    max-width: 32rem;
+    font-size: var(--text-body-lg);
+    line-height: 1.83;
+  }
+
+  @include mq($bp-md) {
+    &__inner {
+      grid-template-columns: minmax(0, 540fr) minmax(0, 580fr);
+      gap: var(--space-8);
+      padding-inline: var(--space-5);
+    }
+
+    &__body {
+      padding-top: var(--space-6);
+    }
+  }
+
+  @include mq($bp-xl) {
+    &__inner {
+      column-gap: var(--space-10);
+    }
+
+    &__body {
+      padding: var(--space-8);
+    }
+  }
+}

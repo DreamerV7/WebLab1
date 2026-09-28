@@ -1,0 +1,17 @@
+{
+  "name": "talking-travel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Вёрстка макета Talking Travel: HTML + SCSS",
+  "scripts": {
+    "dev": "sass --watch --no-source-map src/scss/main.scss css/style.css",
+    "build": "sass --no-source-map --style=compressed src/scss/main.scss css/style.css",
+    "lint:html": "html-validate index.html blog.html"
+  },
+  "devDependencies": {
+    "@fontsource/changa-one": "^5.1.0",
+    "@fontsource/roboto": "^5.1.0",
+    "html-validate": "^9.0.0",
+    "sass": "^1.80.0"
+  }
+}

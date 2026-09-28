@@ -1,0 +1,130 @@
+@use "../abstracts/breakpoints" as *;
+
+.article {
+  padding-block: var(--space-8) var(--space-section);
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-4) var(--space-6);
+  }
+
+  &__title {
+    font-size: var(--text-h1);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    margin-top: var(--space-5);
+
+    > p,
+    .article__section p {
+      max-width: 72ch;
+    }
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  &__subtitle {
+    font-size: var(--text-h3);
+    line-height: 1.125;
+  }
+
+  @include mq($bp-md) {
+    padding-top: var(--space-12);
+
+    &__body {
+      gap: var(--space-10);
+    }
+  }
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+
+  &__avatar {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  &__name {
+    color: var(--color-nav);
+  }
+
+  &__role {
+    font-size: var(--text-small);
+    font-style: italic;
+    color: var(--color-meta);
+  }
+}
+
+.video-cover {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: var(--radius-m);
+
+  > * {
+    grid-area: 1 / 1;
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 912 / 540;
+    object-fit: cover;
+  }
+
+  &__caption {
+    width: 60%;
+    max-width: 26.5rem;
+    margin-top: -8%;
+    pointer-events: none;
+    filter: drop-shadow(0 2px 8px rgb(0 0 0 / 0.25));
+  }
+
+  &__play {
+    display: grid;
+    place-items: center;
+    width: clamp(3.5rem, 11vw, 6.5rem);
+    aspect-ratio: 1;
+    margin-top: 12%;
+    border-radius: 50%;
+    background: rgb(138 83 255 / 0.6);
+    transition: background-color var(--transition), transform var(--transition);
+
+    &::before {
+      content: "";
+      width: 40%;
+      height: 40%;
+      margin-left: 8%;
+      background-color: var(--color-on-accent);
+      mask: url("../img/icons/play.svg") center / contain no-repeat;
+    }
+
+    @include hover {
+      background: var(--color-accent);
+      transform: scale(1.06);
+    }
+  }
+}
